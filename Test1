@@ -128,10 +128,9 @@ AddTextBox(Player, {
     game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = Value
   end
 })
-local Toggle = AddToggle(Aimbot, {
+AddButton(Aimbot, {
   Name = "Load Target",
-  Default = false,
-  Callback = function(Value)
+  Callback = function()
     getgenv().getgenv().Settings = {
     NyulaRemake = {
         Enabled = true,
@@ -380,7 +379,7 @@ local LocalHL = Instance.new("Highlight")
             placemarker.CFrame = CFrame.new(Plr.Character.HumanoidRootPart.Position+Vector3.new(Plr.Character.HumanoidRootPart.AssemblyLinearVelocity.X*getgenv().Settings.NyulaRemake.PREDICTION,Plr.Character.HumanoidRootPart.AssemblyLinearVelocity.Y*getgenv().Settings.NyulaRemake.JUMPPREDICTION,Plr.Character.HumanoidRootPart.AssemblyLinearVelocity.Z*getgenv().Settings.NyulaRemake.PREDICTION))         
 LocalHL.Parent = Plr.Character
 LocalHL.FillTransparency = 0.2
-LocalHL.FillColor = Color3.fromRGB(169, 1, 25)
+LocalHL.FillColor = Color3.fromRGB(48, 113, 169)
 LocalHL.OutlineColor = Color3.fromRGB(0,0,0)
         else
             placemarker.CFrame = CFrame.new(0, 9999, 0)
@@ -583,7 +582,7 @@ AddTextBox(Aimbot, {
 })
 AddTextBox(Aimbot, {
   Name = "JumpPrediction",
-  Default = "bom dia",
+  Default = "",
   PlaceholderText = "JumpPrediction",
   ClearText = true,
   Callback = function(Value)
