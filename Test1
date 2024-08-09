@@ -128,9 +128,10 @@ AddTextBox(Player, {
     game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = Value
   end
 })
-AddButton(Aimbot, {
+local Toggle = AddToggle(Aimbot, {
   Name = "Load Target",
-  Callback = function()
+  Default = false,
+  Callback = function(Value)
     getgenv().getgenv().Settings = {
     NyulaRemake = {
         Enabled = true,
